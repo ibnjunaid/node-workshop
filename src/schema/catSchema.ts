@@ -1,7 +1,10 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const catSchema = new mongoose.Schema({
-    name : String,
+    name : {
+        type:String,
+        required: true,
+    },
     age : Number,
     gender : String,
     dob: Date,
